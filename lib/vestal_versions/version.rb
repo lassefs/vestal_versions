@@ -33,6 +33,11 @@ module VestalVersions
       number == 1
     end
 
+    # checks if the given version is tagged as deleted
+    def is_deleted?
+      tag == 'deleted'
+    end
+
     # Returns the original version number that this version was.
     def original_number
       if reverted_from.nil?
